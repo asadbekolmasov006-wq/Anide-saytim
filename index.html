@@ -23,6 +23,43 @@
 
 </div>
 
+
+
+
+
+<style>
+  /* Asosiy ranglarni belgilash */
+:root {
+    --bg-main: #0A0A0A; /* Qora fon */
+    --text-color: #F7F7F7; /* Oq matn */
+    --accent-pink: #FF69B4; /* Sakura pushtisi */
+    --accent-green: #61ad98; /* Yashil aksent */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-color);
+}
+
+.anime-card {
+    background-color: #1a1a1a; /* Karta foni sal kulrangroq */
+    border: 1px solid var(--accent-pink); /* Pushti chegara */
+}
+
+/* Tugma rangi va sichqoncha ustiga borganda */
+button {
+    background-color: var(--accent-pink);
+    color: var(--bg-main);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFB6C1; /* Ochroq pushti */
+}
+
+</style>
+
+
   
 <script>
 const movies = [
@@ -54,10 +91,10 @@ search.addEventListener("input", () => {
 });
 </script>
 
-<script src="anide.js"></script>
+<!-- <script src="anide.js"></script> -->
 
-  <script>
-    const container = document.querySelector('.sakura-container');
+  <script scr="anide.js">
+    const sakuracontainer = document.querySelector('.sakura-container');
 
     function createPetal() {
         const petal = document.createElement('div');
@@ -84,5 +121,6 @@ search.addEventListener("input", () => {
 
 </body>
 </html>
+
 
 
