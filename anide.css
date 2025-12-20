@@ -11,7 +11,7 @@ body {
 
 body {
     /* Eski qora fon rangini o'chirib, rasm URL manzilini qo'shamiz */
-    background-image: url('images/anime-background.jpg'); 
+    background-image: url('kaneki3.jpg'); 
 
     /* Rasmni butun ekranga moslashtirish */
     background-size: cover; 
@@ -197,6 +197,7 @@ nav a:hover {
     animation: fall linear infinite;
     opacity: 0;
 }
+
 
 
 
