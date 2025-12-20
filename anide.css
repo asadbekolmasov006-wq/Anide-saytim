@@ -20,6 +20,53 @@ header input {
   border: none;
 }
 
+
+
+
+
+
+
+
+/* Asosiy ranglarni belgilash */
+:root {
+    --bg-main: #0A0A0A; /* Qora fon */
+    --text-color: #F7F7F7; /* Oq matn */
+    --accent-pink: #FF69B4; /* Sakura pushtisi */
+    --accent-green: #61ad98; /* Yashil aksent */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-color);
+}
+
+.anime-card {
+    background-color: #1a1a1a; /* Karta foni sal kulrangroq */
+    border: 1px solid var(--accent-pink); /* Pushti chegara */
+}
+
+/* Tugma rangi va sichqoncha ustiga borganda */
+button {
+    background-color: var(--accent-pink);
+    color: var(--bg-main);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFB6C1; /* Ochroq pushti */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 #movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -81,4 +128,36 @@ nav a {
 
 nav a:hover {
   color: #00ffc8;
+}
+
+
+
+
+
+
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Sayt elementlariga bosishga xalaqit bermaydi */
+    z-index: 1000; /* Boshqa hamma narsadan ustun turadi */
+    overflow: hidden; /* Gullar ekrandan tashqariga chiqib ketmasligi uchun */
+}
+
+/* Gullar uchun asosiy stil */
+@keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0.1; }
+}
+
+.petal {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--accent-pink);
+    border-radius: 50% 10% 50% 10%; /* Gul shakli */
+    animation: fall linear infinite;
+    opacity: 0;
 }
