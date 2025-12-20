@@ -5,6 +5,31 @@ body {
   color: #fff;
 }
 
+
+
+
+
+body {
+    /* Eski qora fon rangini o'chirib, rasm URL manzilini qo'shamiz */
+    background-image: url('images/anime-background.jpg'); 
+
+    /* Rasmni butun ekranga moslashtirish */
+    background-size: cover; 
+
+    /* Rasmni sahifa markaziga joylashtirish */
+    background-position: center; 
+
+    /* Sahifa pastga aylanganda rasm joyida turadi (xohishga ko'ra) */
+    background-attachment: fixed; 
+
+    /* Rasm yuklanmay qolsa, qora rang fon bo'lib turadi */
+    background-color: #0A0A0A; 
+}
+
+
+
+
+
 header {
   padding: 20px;
   background: #1f1f1f;
@@ -161,3 +186,4 @@ nav a:hover {
     animation: fall linear infinite;
     opacity: 0;
 }
+
