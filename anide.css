@@ -64,8 +64,9 @@ header input {
 
 
 /* Asosiy ranglarni belgilash */
+
 :root {
-    --bg-main: #0A0A0A; /* Qora fon */
+    /* --bg-main: #0A0A0A; /* Qora fon */ */
     --text-color: #F7F7F7; /* Oq matn */
     --accent-pink: #FF69B4; /* Sakura pushtisi */
     --accent-green: #61ad98; /* Yashil aksent */
@@ -197,6 +198,7 @@ nav a:hover {
     animation: fall linear infinite;
     opacity: 0;
 }
+
 
 
 
