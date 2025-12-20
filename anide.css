@@ -27,8 +27,7 @@ body {
 }
 
 
-<style>
-  body {
+body {
     background-image: url('kaneki3.jpg'); /* Bu yerga yuklagan rasmingiz nomini yozing */
     background-size: cover;                /* Rasmni butun ekran bo'ylab yoyadi */
     background-position: center;           /* Rasmni markazga joylaydi */
@@ -38,7 +37,7 @@ body {
     padding: 0;
     height: 100vh;
   }
-</style>
+
 
 
 
@@ -198,5 +197,6 @@ nav a:hover {
     animation: fall linear infinite;
     opacity: 0;
 }
+
 
 
