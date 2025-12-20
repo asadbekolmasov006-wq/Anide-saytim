@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>MULTIFILM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="multik">
+
+<header>
+  <h1>MULTIFILM</h1>
+  <nav>
+    <a href="index.html">Bosh sahifa</a>
+    <a href="kino.html">Kino</a>
+    <a href="multik.html">Multfilm</a>
+  </nav>
+  <input type="text" id="search" placeholder="Anime qidirish...">
+</header>
+
+<main id="movies"></main>
+
+<script>
+const movies = [
+  { title: "Naruto", img: "https://i.imgur.com/8Y1ZQZQ.jpg" },
+  { title: "One Piece", img: "https://i.imgur.com/2rmU7hE.jpg" },
+  { title: "Attack on Titan", img: "https://i.imgur.com/J5LVHEL.jpg" }
+];
+
+const container = document.getElementById("movies");
+const search = document.getElementById("search");
+
+function show(list) {
+  container.innerHTML = "";
+  list.forEach(m => {
+    container.innerHTML += `
+      <div class="card">
+        <img src="${m.img}">
+        <h3>${m.title}</h3>
+      </div>
+    `;
+  });
+}
+
+show(movies);
+
+search.addEventListener("input", () => {
+  const v = search.value.toLowerCase();
+  show(movies.filter(m => m.title.toLowerCase().includes(v)));
+});
+</script>
+
+<script src="anide.js"></script>
+
+
+</body>
+</html>
