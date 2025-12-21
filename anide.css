@@ -76,10 +76,10 @@ body {
     color: var(--text-color);
 }
 
-.anime-card {
-    background-color: #1a1a1a; /* Karta foni sal kulrangroq */
-    border: 1px solid var(--accent-pink); /* Pushti chegara */
-}
+/* .anime-card {
+    background-color: #1a1a1a; /* Karta foni sal kulrangroq */ */
+    /* border: 1px solid var(--accent-pink); /* Pushti chegara */ */
+/* } */
 
 /* Tugma rangi va sichqoncha ustiga borganda */
 button {
@@ -398,6 +398,7 @@ nav a:hover::after {
   font-size: 18px;
   letter-spacing: 1px;
 }
+
 
 
 
