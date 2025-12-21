@@ -56,12 +56,42 @@ function AnimeBackground(https://pin.it/14obEWKfz) {
 
 
 
+function BackgroundVideoLayout() {
+  return (
+    <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'fixed',  // yoki 'absolute' ham bo‘ladi
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',  // video ekran bo‘ylab to‘liq yoyiladi
+          zIndex: -1,          // video saytdagi boshqa elementlar ostida qoladi
+        }}
+      >
+        <source src="/videos/anime-background.mp4" type="video/mp4" />
+        Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
+      </video>
+
+      {/* Sayt kontenti */}
+      <div style={{ position: 'relative', zIndex: 1, color: '#fff', padding: '20px' }}>
+        <h1>Anime Saytga Xush Kelibsiz!</h1>
+        <p>Bu yerda animelarni tomosha qiling.</p>
+      </div>
+    </div>
+  );
+}
 
 
 
 
-
-<video
+{/* <video
   autoPlay
   loop
   muted
@@ -79,7 +109,7 @@ function AnimeBackground(https://pin.it/14obEWKfz) {
   <source src="/videos/anime-background.mp4" type="video/mp4" />
   <source src="/videos/anime-background.webm" type="video/webm" />
   Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
-</video>
+</video> */}
 
 
 
