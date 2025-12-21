@@ -11,7 +11,7 @@ body {
 
 body {
     /* Eski qora fon rangini o'chirib, rasm URL manzilini qo'shamiz */
-    background-image: url('kaneki3.jpg'); 
+    background-image: url('https://pin.it/14obEWKfz'); 
 
     /* Rasmni butun ekranga moslashtirish */
     background-size: cover; 
@@ -398,6 +398,7 @@ nav a:hover::after {
   font-size: 18px;
   letter-spacing: 1px;
 }
+
 
 
 
