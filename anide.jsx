@@ -10,3 +10,87 @@
 //     </div>
 //   );
 // }
+
+
+
+function AnimeBackground() {
+  return (
+    <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1,
+        }}
+      >
+        <source src="/videos/anime-background.mp4" type="video/mp4" />
+        Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
+      </video>
+
+      <div style={{ position: 'relative', zIndex: 1, color: 'white', padding: '20px' }}>
+        {/* Sayt kontenti shu yerda */}
+        <h1>Anime Saytiga Xush Kelibsiz!</h1>
+        <p>Bu yerda siz animelarni ko‘rishingiz mumkin.</p>
+      </div>
+    </div>
+  );
+}
+
+
+
+
+<video autoPlay loop muted playsInline style={...}>
+  <source src="/videos/anime-background.mp4" type="video/mp4" />
+  <source src="/videos/anime-background.webm" type="video/webm" />
+  Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
+</video>
+
+
+
+
+
+
+
+
+
+<video
+  autoPlay
+  loop
+  muted
+  playsInline
+  style={{
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    top: 0,
+    left: 0,
+    zIndex: -1,
+  }}
+>
+  <source src="/videos/anime-background.mp4" type="video/mp4" />
+  <source src="/videos/anime-background.webm" type="video/webm" />
+  Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
+</video>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
