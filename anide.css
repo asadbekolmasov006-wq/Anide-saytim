@@ -59,10 +59,6 @@ header input {
 
 
 
-.main {
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(6px);
-}
 
 
 
@@ -205,5 +201,19 @@ nav a:hover {
 
 
 
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("bg.jpg") no-repeat center center/cover;
+  color: #fff;
+}
+
+.main {
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  padding: 30px;
+  min-height: 100vh;
+}
 
 
