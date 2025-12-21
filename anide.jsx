@@ -13,7 +13,7 @@
 
 
 
-function AnimeBackground() {
+function AnimeBackground(https://github.com/asadbekolmasov006-wq/Anide-saytim/blob/main/%23gojo%20%23gojosatoru%20%23jujutsukaisen%20%23jujutsu.jpg?raw=true) {
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
       <video
