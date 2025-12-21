@@ -48,8 +48,8 @@ function AnimeBackground(https://pin.it/14obEWKfz) {
 
 
 <video autoPlay loop muted playsInline style={...}>
-  <source src="/videos/anime-background.mp4" type="video/mp4" />
-  <source src="/videos/anime-background.webm" type="video/webm" />
+  <source src="anime_girls.mp4" type="video/mp4" />
+  <source src="anime_girls.mp4" type="video/webm" />
   Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
 </video>
 
