@@ -31,7 +31,7 @@ function AnimeBackground(https://pin.it/14obEWKfz) {
           zIndex: -1,
         }}
       >
-        <source src="https://pin.it/14obEWKfz" />
+        <source src="" />
         Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
       </video>
 
