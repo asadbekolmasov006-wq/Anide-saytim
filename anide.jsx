@@ -13,7 +13,7 @@
 
 
 
-function AnimeBackground(https://github.com/asadbekolmasov006-wq/Anide-saytim/blob/main/%23gojo%20%23gojosatoru%20%23jujutsukaisen%20%23jujutsu.jpg?raw=true) {
+function AnimeBackground(https://pin.it/14obEWKfz) {
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
       <video
@@ -31,7 +31,7 @@ function AnimeBackground(https://github.com/asadbekolmasov006-wq/Anide-saytim/bl
           zIndex: -1,
         }}
       >
-        <source src="/videos/anime-background.mp4" type="video/mp4" />
+        <source src="https://pin.it/14obEWKfz" />
         Sizning brauzeringiz video tagini qo‘llab-quvvatlamaydi.
       </video>
 
