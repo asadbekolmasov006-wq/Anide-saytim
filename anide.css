@@ -306,7 +306,7 @@ nav a:hover::after {
 }
 
 
-
+/* 
 
 
 .search {
@@ -315,9 +315,89 @@ nav a:hover::after {
   border: none;
   outline: none;
   width: 220px;
+} */
+
+
+
+/* .anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
 }
 
+.anime-card {
+  position: relative;
+  height: 270px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  transition: transform 0.4s ease;
+}
 
+.anime-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.anime-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.anime-card:hover img {
+  transform: scale(1.1);
+} */
+
+/* Overlay */
+/* .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.9)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.anime-card:hover .overlay {
+  opacity: 1;
+} */
+
+
+
+
+
+/* Play button */
+.play {
+  font-size: 55px;
+  color: white;
+  background: crimson;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px crimson;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
 
 
 
