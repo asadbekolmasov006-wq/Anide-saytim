@@ -276,6 +276,47 @@ body {
 
 
 
+header {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  padding: 15px 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: crimson;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+.search {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 220px;
+}
+
 
 
 
