@@ -59,7 +59,10 @@ header input {
 
 
 
-
+.main {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+}
 
 
 
@@ -198,6 +201,7 @@ nav a:hover {
     animation: fall linear infinite;
     opacity: 0;
 }
+
 
 
 
