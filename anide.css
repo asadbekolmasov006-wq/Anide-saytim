@@ -97,7 +97,49 @@ button:hover {
 
 
 
+.movie-card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
 
+.movie-card:hover {
+    transform: scale(1.05); /* Kattalashish effekti */
+    box-shadow: 0 6px 25px rgba(135, 206, 235, 0.6); /* Yorqin chegara (glow) */
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ma'lumotlar overlayi uchun CSS */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 15px;
+    color: white;
+}
+
+.card-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.card-details {
+    font-size: 14px;
+    opacity: 0.8;
+}
 
 
 
@@ -398,6 +440,7 @@ nav a:hover::after {
   font-size: 18px;
   letter-spacing: 1px;
 }
+
 
 
 
