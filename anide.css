@@ -142,7 +142,17 @@ button:hover {
 }
 
 
+/* Asosiy fon uchun yangi uslub */
+body, .main-container {
+    background-color: #121212; /* Juda to'q kulrang/deyarli qora */
+    color: #e0e0e0; /* Oqish matn rangi */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Zamonaviy shrift */
+}
 
+/* Orqa fondagi rasmlarni o'chirish */
+.background-image-container {
+    display: none; /* Bu qator orqa fondagi kollajni butunlay yashiradi */
+}
 
 
 #movies {
@@ -440,6 +450,7 @@ nav a:hover::after {
   font-size: 18px;
   letter-spacing: 1px;
 }
+
 
 
 
