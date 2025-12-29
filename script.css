@@ -1,0 +1,101 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // --- 1. SAKURA ANIMATSIYA KODI ---
+    const container = document.querySelector('.sakura-container');
+    function createPetal() {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        petal.style.left = Math.random() * 100 + 'vw';
+        petal.style.animationDuration = Math.random() * 5 + 5 + 's';
+        container.appendChild(petal);
+        petal.addEventListener('animationend', () => {
+            petal.remove();
+        });
+    }
+    setInterval(createPetal, 500);
+
+    // --- 2. QIDIRUV FUNKSIYASI (index.html uchun) ---
+    const searchInput = document.getElementById('anime-search');
+    const movieCards = document.querySelectorAll('.movie-card-link');
+    if (searchInput && movieCards.length > 0) {
+        searchInput.addEventListener('input', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+            movieCards.forEach(cardLink => {
+                const title = cardLink.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    cardLink.style.display = '';
+                } else {
+                    cardLink.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // --- 3. VIDEO PLeyer LOGIKASI (detail.html uchun) ---
+    const videoPlayer = document.querySelector('video');
+    const episodeItems = document.querySelectorAll('.episodes-section li');
+    const nextEpisodeBtn = document.getElementById('next-episode-btn');
+
+    if (videoPlayer && episodeItems.length > 0) {
+
+        // Keyingi epizodga o'tish funksiyasi
+        function goToNextEpisode() {
+            const currentSource = videoPlayer.querySelector('source').src;
+            let nextItem = null;
+
+            episodeItems.forEach((item, index) => {
+                if (item.getAttribute('data-src') === currentSource) {
+                    if (index + 1 < episodeItems.length) {
+                        nextItem = episodeItems[index + 1];
+                    }
+                }
+            });
+
+            if (nextItem) {
+                const newVideoSource = nextItem.getAttribute('data-src');
+                videoPlayer.querySelector('source').src = newVideoSource;
+                videoPlayer.load();
+                videoPlayer.play();
+            } else {
+                console.log("Oxirgi epizod tugadi, keyingisi yo'q.");
+            }
+        }
+
+        // Epizodni bosganda video almashtirish
+        episodeItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const newVideoSource = item.getAttribute('data-src');
+                if (newVideoSource) {
+                    videoPlayer.querySelector('source').src = newVideoSource;
+                    videoPlayer.load();
+                    videoPlayer.play();
+                    if (nextEpisodeBtn) nextEpisodeBtn.style.display = 'block';
+                }
+            });
+        });
+
+        // Avtomatik o'tish va tugma funksiyasi
+        if (nextEpisodeBtn) {
+            nextEpisodeBtn.addEventListener('click', goToNextEpisode);
+            videoPlayer.addEventListener('ended', goToNextEpisode);
+        }
+
+        // --- 4. VIDEO PROGRESSINI SAQLASH ---
+        const storageKey = 'animeVideoProgress_';
+
+        window.addEventListener('beforeunload', () => {
+            const currentEpisodeId = videoPlayer.querySelector('source').src;
+            if (currentEpisodeId) {
+                localStorage.setItem(storageKey + currentEpisodeId, videoPlayer.currentTime);
+            }
+        });
+
+        videoPlayer.addEventListener('loadedmetadata', () => {
+            const currentEpisodeId = videoPlayer.querySelector('source').src;
+            const savedTime = localStorage.getItem(storageKey + currentEpisodeId);
+            if (savedTime && savedTime > 0) {
+                videoPlayer.currentTime = savedTime;
+                console.log(`Progress tiklandi: ${savedTime} sekund`);
+            }
+        });
+    }
+});
