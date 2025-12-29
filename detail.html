@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iblislar Qotili - Anide Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <div class="sakura-container"></div>
+    <header>
+        <div class="container header-content">
+            <div class="logo">ANIDE MEDIA</div>
+            <nav>
+                <a href="index.html">Bosh sahifa</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Video pleyer va tugma joylashuvi -->
+        <div class="video-container" style="position: relative;">
+            <video controls poster="via.placeholder.com">
+                <!-- data-src dagi manzillarni haqiqiy video manziliga o'zgartiring -->
+                <source src="sizningsaytingiz.uz" type="video/mp4">
+                Browseringiz video tegini qo'llab-quvvatlamaydi.
+            </video>
+            <button id="next-episode-btn" style="display: none;">Keyingi epizodga o'tish</button>
+        </div>
+
+        <div class="content-layout">
+            <div class="description-section">
+                <h1>LOOKISM</h1>
+                <p>⭐️ 8.0 | Anime / Drama | 8 Epizod</p>
+                <h2>Tavsif</h2>
+                <p>Tavsif qismi. Bu yerga animening qiziqarli syujeti haqida ma'lumot yoziladi. Masalan, Tanjiro Kamado oilasini o'ldirgan iblislardan o'ch olish va singlisini qutqarish uchun qilichbozlikni o'rganishi haqida. Hikoya o'sish va qahramonlikka asoslangan.</p>
+            </div>
+            
+            <div class="episodes-section">
+                <h2>QISMLAR</h2>
+                <!-- data-src dagi manzillarni haqiqiy video manziliga o'zgartiring -->
+                <ul>
+                    <li data-src="LOOKISM 2-qism [anibla.uz].mp4">1 QSIM: BOSHQA MAKTABGA KETAMAN </li>
+                    <li data-src="sizningsaytingiz.uz">2 QISM: BU TANA BILAN BOSHQACHA BOLAMAN</li>
+                    <li data-src="sizningsaytingiz.uz">3 QISM: ISHDAGI KOCHA BOLLARI</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
