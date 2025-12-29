@@ -1,0 +1,236 @@
+/* Umumiy sozlamalar va fon rangi */
+body {
+    background-color: #121212; /* Nafis, to'q fon */
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header stili */
+header {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00bfa5; /* Animega mos yorqin rang */
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bfa5;
+}
+
+.search-box input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Asosiy kontent */
+h1 {
+    margin-top: 30px;
+    font-size: 32px;
+}
+
+/* Movie Grid (Kartochkalar joylashuvi) */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Movie Card (Kartochka) stili va hover effekti */
+.movie-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.movie-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 350px;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 191, 165, 0.6); /* Yorqin chegara */
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 15px;
+    color: white;
+}
+
+.card-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.card-details {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Detail sahifa uchun CSS */
+.video-container {
+    margin-top: 20px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#next-episode-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+}
+
+.content-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.description-section {
+    flex: 2;
+}
+
+.episodes-section {
+    flex: 1;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.episodes-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.episodes-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+.episodes-section li:hover {
+    color: #00bfa5;
+}
+
+/* Sakura animatsiyasi CSSi */
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.petal {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ffb6c1;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* --- MOBIL MOSLASHUVCHANLIK (RESPONSIVE DESIGN) --- */
+
+/* Kichik ekranlar uchun (Smartfonlar: 600px gacha) */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo { margin-bottom: 10px; }
+    nav { margin-bottom: 10px; }
+    nav a { margin-left: 0; margin-right: 15px; }
+    .search-box { width: 100%; }
+    .search-box input { width: 100%; box-sizing: border-box; }
+    .movie-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .movie-card { width: 100%; height: 400px; }
+    .content-layout { flex-direction: column; }
+    .hero-overlay h1 { font-size: 32px; }
+}
+
+/* O'rta ekranlar uchun (Planshetlar: 601px dan 1024px gacha) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .movie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
